@@ -28,10 +28,12 @@ function App() {
     }
   };
 
+  // function for handling user edit data across all inputs //
   const handleEdit = (user: User) => {
     setEditingUser(user);
   };
 
+  // function for handling user data deletion //
   const handleDelete = (id: number) => {
     setUsers(users.filter((user) => user.id !== id));
   };
