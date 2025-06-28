@@ -39,7 +39,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col sm:flex-row items-center m-0 px-4 justify-evenly gap-4 bg-gradient-to-br from-blue-100 to-blue-500">
+    <div className="min-h-screen flex flex-col sm:flex-row items-start m-0 px-4 py-20 justify-evenly gap-4 bg-gradient-to-br from-blue-100 to-blue-500">
       <UserForm onSubmit={handleAddOrUpdateUser} editingUser={editingUser} />
       <UserTable users={users} onEdit={handleEdit} onDelete={handleDelete} />
     </div>
