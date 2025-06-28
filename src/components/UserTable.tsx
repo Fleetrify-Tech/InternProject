@@ -27,7 +27,7 @@ export default function UserTable({ users, onEdit, onDelete }: Props) {
               <td className=" px-2">{user.lastName}</td>
               <td className=" px-2">{user.dob}</td>
               <td className="flex gap-1 py-2 px-2">
-                {// Buttons for editing and deleting the user form data//}
+                {// Buttons for editing and deleting the user form data //}
                 <button
                   className=" p-1 rounded-md hover:bg-blue-600 hover:text-white"
                   onClick={() => onEdit(user)}
