@@ -10,7 +10,7 @@ interface Props {
 export default function UserTable({ users, onEdit, onDelete }: Props) {
   return (
     <div className="flex flex-col sm:flex-row">
-      <table className="min-w-full  bg-white">
+      <table className="min-w-full  bg-white"> {// Table Headers // }
         <thead>
           <tr>
             <th className=" px-4 py-2">First Name</th>
@@ -20,12 +20,14 @@ export default function UserTable({ users, onEdit, onDelete }: Props) {
           </tr>
         </thead>
         <tbody>
+        {// Table data gets rendered upon completion // }
           {users.map((user) => (
             <tr key={user.id}>
               <td className=" px-2">{user.firstName}</td>
               <td className=" px-2">{user.lastName}</td>
               <td className=" px-2">{user.dob}</td>
               <td className="flex gap-1 py-2 px-2">
+                {// Buttons for editing and deleting the user form data//}
                 <button
                   className=" p-1 rounded-md hover:bg-blue-600 hover:text-white"
                   onClick={() => onEdit(user)}
